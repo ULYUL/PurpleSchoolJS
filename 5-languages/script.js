@@ -1,15 +1,15 @@
 
-let language = prompt('Выбери язык? English,Russin,German');
+let language = prompt('Выбери язык? ru,en,de');
 console.log(language)
 
 switch(language) {
-    case 'English' :
+    case 'en' :
     console.log('Hi');
     break;
-    case 'Russian' :
+    case 'ru' :
     console.log('Привет');
     break;
-    case 'German' :
+    case 'de' :
     console.log('Gutten tag');
     break;
     default : 
