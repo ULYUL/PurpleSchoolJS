@@ -10,7 +10,7 @@ switch(language) {
     console.log('Привет');
     break;
     case 'German' :
-    console.log('Привет');
+    console.log('Gutten tag');
     break;
     default : 
     console.log('Я не знаю твой язык')
