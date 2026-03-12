@@ -1,16 +1,19 @@
-function crypto(passw) {
-    if (typeof passw !== 'string') return 'Ошибка';
-    const arr = passw.split('');
-    const lastFour = arr.splice(-4);
-    lastFour.reverse();
-    return arr.concat(lastFour).join('');
-}
+    function crypto(passw) {
+        if (typeof passw !== 'string') return null;
+        const arr = passw.split('');
+        const firstFour = arr.slice(0, 4); 
+        const lastFour = arr.slice(-4);
+        firstFour.reverse(); 
+        lastFour.reverse();  
+        return firstFour.concat(lastFour).join('');
+    }
 
-function check(original, encrypted) {
-    return crypto(original) === encrypted;
-}
+    console.log(crypto('password'));
+    function check(encrypted, original) {
+        return crypto(original) === encrypted;
+    }
 
 
-const original = 'password';
-const encrypted = crypto(original);
-console.log(check(original,encrypted))
+    const original = 'password';
+    const encrypted = crypto(original);
+    console.log(check(encrypted,original));
