@@ -13,7 +13,4 @@
         return crypto(original) === encrypted;
     }
 
-
-    const original = 'password';
-    const encrypted = crypto(original);
-    console.log(check(encrypted,original));
+    check('password',crypto('password'))
